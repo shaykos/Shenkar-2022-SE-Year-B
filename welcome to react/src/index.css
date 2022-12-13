@@ -1,0 +1,16 @@
+.app-header{
+    width:100%;
+}
+
+.app-header ul {
+    list-style: none;
+    padding:0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.app-header ul li{
+    /* display: inline-block; */
+    text-align: center;
+}
+
