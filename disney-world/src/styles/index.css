@@ -1,0 +1,74 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    /*מינימום גובה = גובה המסך*/
+    font-size: 16px;
+    /*em יחידת מידה ביחס ל */
+}
+
+img {
+    max-width: 100%;
+    /*רוחב מקסימלי של תמונה = רוחב המסך*/
+}
+
+.grid {
+    display: grid;
+}
+
+#header,
+#footer {
+    padding-block: 2rem;
+    font-size: 12px;
+    text-align: center;
+    background-color: black;
+}
+
+#header h1 {
+    font-size: 3em;
+    color: rgb(228, 214, 25);
+    text-transform: uppercase;
+}
+
+#movies-list {
+    margin-top: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#movies-list li {
+    text-align: center;
+}
+
+
+h2#top3-header {
+    text-align: center;
+    margin-top:1.2rem;
+}
+
+.movie-card {
+    margin: 1rem auto;
+    width: 75%;
+    box-shadow: 0 0 8px #888;
+}
+
+.movie-card p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#footer p {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
