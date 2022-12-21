@@ -5,7 +5,10 @@ export default function MoviesList({ movies }) {
     <>
       <ul id="movies-list" className="grid">
         {
-          movies.map((item) => <li>{item}</li>)
+          movies.map((item, index) => <li key={index}>
+            <a href={item.link}>{item.name}</a>
+          </li>
+          )
         }
       </ul>
     </>
