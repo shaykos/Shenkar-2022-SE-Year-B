@@ -1,7 +1,4 @@
-import React from 'react'
-
 export default function MovieCard({ image, name, details, link }) {
-
 
   const ShowDetails = () => {
     if (!details) // if details is undefined
