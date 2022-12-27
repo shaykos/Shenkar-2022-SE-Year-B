@@ -67,6 +67,12 @@ h2#top3-header {
     text-align: center;
 }
 
+.movie-card p:hover {
+   cursor: pointer;
+   scale: 1.5;
+   transition: all 0.2s;
+}
+
 #footer p {
     text-align: center;
     color: white;
