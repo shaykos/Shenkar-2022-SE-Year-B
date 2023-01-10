@@ -1,0 +1,14 @@
+[
+    {
+        "id":111,
+        "title":"Do Homework",
+        "text":"I need to review a YOUTUBE video about useEffect",
+        "date":"2023-01-04"
+    },
+    {
+        "id":222,
+        "title":"Go To SLEEEEPPPPPPP",
+        "text":"Zzzz Zzzz Zzzz",
+        "date":"2023-01-03"
+    }
+]
