@@ -1,0 +1,19 @@
+@media screen and (min-width: 600px) {
+    #header nav {
+        grid-template-columns: 1fr 4fr;
+    }
+
+    .price-holder {
+        grid-template-columns: 1fr 1fr;
+        gap: 5em;
+    }
+
+    .price:after {
+        content: ' USD';
+    }
+
+    .line-through {
+        text-decoration: line-through;
+        color:red;
+    }
+}

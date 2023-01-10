@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Andy",
+        "img": "https://media.istockphoto.com/id/536974213/photo/rex-the-green-dinosaur-toy-character-from-toy-story.jpg?s=612x612&w=is&k=20&c=gNWFwRYGhDXO4rPsCc7ML7EStKGPfolre9_x2r7PglM=",
+        "price": 100,
+        "salePrice": 100
+    },
+    {
+        "name": "Toy 1",
+        "img": "https://thumbs.dreamstime.com/z/plastic-orange-dinosaur-toy-spinosaurus-plastic-orange-dinosaur-toy-spinosaurus-isolated-white-background-139347852.jpg",
+        "price": 50,
+        "salePrice": 35
+    },
+    {
+        "name": "Toy 2",
+        "img": "https://media.gettyimages.com/id/157393605/photo/toy-stegosaurus-dinosaur-colorful-white-background-extinct-species.jpg?s=612x612&w=gi&k=20&c=sOu-yKCyuxXr-0NEFXrnyySwPY2DzK8C5Vj_t4Ze5KA=",
+        "price": 120,
+        "salePrice": 100
+    },
+    {
+        "name": "Toy 3",
+        "img": "https://www.shutterstock.com/image-photo/spinosaurus-made-out-plastic-dinosaur-260nw-687129295.jpg",
+        "price": 200,
+        "salePrice": 200
+    },
+    {
+        "name": "Toy 4",
+        "img": "https://thumbs.dreamstime.com/z/dinosaur-toy-4370536.jpg",
+        "price": 60,
+        "salePrice": 55
+    }
+]
