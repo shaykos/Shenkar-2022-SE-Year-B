@@ -20,7 +20,7 @@ export default function Store() {
 
   return (
     <>
-      <section>
+      <section className="grid toys-holder">
         {
           toys.map((item)=><Toy key={item.name} {...item} />)
         }

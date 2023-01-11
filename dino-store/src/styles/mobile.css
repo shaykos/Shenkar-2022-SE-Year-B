@@ -1,0 +1,53 @@
+#header nav {
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+#header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toys-holder {
+    padding-inline: 1.25em;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    margin-block: 1em;
+}
+
+.toy {
+    box-shadow: 0 0 8px #888;
+    /* margin-block: 1em; */
+}
+
+.toy h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.toy p {
+    text-align: center;
+}
+
+.price {
+    font-size: 1.2em;
+}
+
+.price:after {
+    content: ' USD';
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: red;
+}
+
+.price.line-through {
+    font-size: 0.85em;
+}

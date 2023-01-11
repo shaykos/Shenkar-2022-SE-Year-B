@@ -21,6 +21,9 @@ export default function AppHeader() {
                     <li>
                         <Link to="/profile">Profile</Link>
                     </li>
+                    <li>
+                        <Link to="/profile">Logout</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
