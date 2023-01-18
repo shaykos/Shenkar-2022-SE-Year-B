@@ -1,0 +1,5 @@
+@media screen and (min-width: 40em){
+    .details > div{
+        grid-template-columns: 1fr 1fr;
+    }
+}

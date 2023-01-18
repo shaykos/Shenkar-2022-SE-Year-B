@@ -24,7 +24,7 @@ export default function Home() {
 
     return (
         <>
-            <h1>רשימת מדבירים</h1>
+            <h1 className="text-center">רשימת מדבירים</h1>
             <table className="table">
                 <thead>
                     <tr>

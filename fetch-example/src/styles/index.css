@@ -1,20 +1,24 @@
-@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');@import url('./reset.css');
+@import url('./mobile.css');
+@import url('./desktop.css');
 
-.table {
-    width: 80%;
-    margin-inline: auto;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;}
+
+body {
+    direction: rtl;
+}
+
+.grid {
+    display: grid;
+}
+
+.text-center{
     text-align: center;
-    margin-top:2em;
 }
 
-.table,
-.table tr,
-.table td,
-.table th {
-    border: 1px solid #000;
-    border-collapse: collapse;
-}
 
-.table thead tr:nth-child(1){
-    background-color: hsla(192, 74%, 71%, 0.822);
-}
+

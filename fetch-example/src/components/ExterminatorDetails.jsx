@@ -2,20 +2,20 @@
 export default function ExterminatorDetails({ FirstName, LastName, LicenseNumber, LicenseType, PermitExpirationDate, Status, settlement, Telephone, rank }) {
     return (
         <>
-            <h1>מידע על  {FirstName} {LastName}</h1>
-            <div className="Details">
-                <div className="license">
-                    <p>מספר רשיון: {LicenseNumber}</p>
-                    <p>סוג הרשיון: {LicenseType}</p>
-                    <p>תאריך פקיעת הרשיון: {PermitExpirationDate}</p>
-                    <p>סטטוס רשיון: {Status}</p>
+            <div className="details grid">
+                <h1 className="text-center">מידע על  {FirstName} {LastName}</h1>
+                <div className="license grid">
+                    <p><strong>מספר רשיון: </strong>{LicenseNumber}</p>
+                    <p><strong>סוג הרשיון: </strong>{LicenseType}</p>
+                    <p><strong>תאריך פקיעת הרשיון: </strong>{PermitExpirationDate}</p>
+                    <p><strong>סטטוס רשיון: </strong>{Status}</p>
                 </div>
-                <div className="">
-                    <p>יישוב: {settlement}</p>
-                    <p>טלפון: {Telephone}</p>
+                <div className="grid">
+                    <p><strong>יישוב: </strong>{settlement}</p>
+                    <p><strong>טלפון: </strong>{Telephone}</p>
                 </div>
                 <div className="rank">
-                    <p>דירוג: {(rank * 100).toFixed(2)} / 10</p>
+                    <p><strong>דירוג: </strong>{(rank * 100).toFixed(2)} / 10</p>
                 </div>
             </div>
         </>

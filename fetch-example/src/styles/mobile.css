@@ -1,0 +1,40 @@
+.table {
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+    margin-top:2em;
+}
+
+.table,
+.table tr,
+.table td,
+.table th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.table td,
+.table th {
+    padding-block:0.25em;
+}
+
+.table thead tr:nth-child(1){
+    background-color: hsla(192, 74%, 71%, 0.822);
+}
+
+.details {
+    width:50%;
+    margin-top: 2em;
+    margin-inline: auto;
+    border: 1px solid #000;
+}
+
+.details h1{
+    background-color: hsl(180, 51%, 67%);
+    padding-block: 0.5em;
+}
+
+.details > div{
+    grid-template-columns: 1fr;
+    padding-inline: 1em;
+}

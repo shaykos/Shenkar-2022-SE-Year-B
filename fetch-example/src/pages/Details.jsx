@@ -35,7 +35,7 @@ export default function Details() {
 
     return (
         <>
-        <div className="card">
+        <div className="card grid">
             <ExterminatorDetails {...exterminator} />
         </div>
         </>
