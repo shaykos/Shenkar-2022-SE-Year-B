@@ -17,8 +17,15 @@ export default function UserContextProvider({ children }) {
             SetUsers(data)
         } catch (err) {
             console.error(err);
-        } 
+        }
     }
+
+    //בדיקה שיש יוזר עם שם משתמש וסיסמה כמו שהתקבלו
+    const Login = (username, password) => {
+        let user = users.find((u) => u.username == username && u.password == password)
+        return user;
+    }
+
 
     //בטעינה ראשונה של הקונטקסט
     useEffect(() => {
@@ -28,7 +35,8 @@ export default function UserContextProvider({ children }) {
     //משתנה שיכיל את כל הדברים שאני רוצה לשתף
     const value = {
         users,
-        SetUsers
+        SetUsers, 
+        Login
     }
 
     return (

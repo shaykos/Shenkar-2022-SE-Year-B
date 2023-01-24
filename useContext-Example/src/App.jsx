@@ -1,13 +1,21 @@
-import React from 'react'
-import Users from './Components/Users'
-import UserContextProvider from './Context/UserContext'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginPage from './Pages/LoginPage';
+import UserContextProvider from './Context/UserContext';
 
 export default function App() {
   return (
     <>
-      <UserContextProvider>
-        <Users />
-      </UserContextProvider>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<h1>Hi</h1>} />
+            <Route path="/login" element={
+              <UserContextProvider>
+                <LoginPage />
+              </UserContextProvider>
+            }/>
+          </Routes>
+      </BrowserRouter>
     </>
   )
 }
