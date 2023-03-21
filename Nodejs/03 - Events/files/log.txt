@@ -1,0 +1,12 @@
+Tue Mar 21 2023 11:38:48 GMT+0200 (Israel Standard Time)	user__name	Error while fetching data from SQL server
+-----------------------
+
+2023-03-21T09:39:44.651Z	user__name	Error while fetching data from SQL server
+-----------------------
+
+Tue Mar 21 2023 11:41:21 GMT+0200 (Israel Standard Time)	user__name	Error while fetching data from SQL server
+-----------------------
+
+2023-03-21T09:43:42.741Z	user__name	999	Error while fetching data from SQL server
+-----------------------
+
