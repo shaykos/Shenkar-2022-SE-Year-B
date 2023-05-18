@@ -6,7 +6,7 @@ const database = 'shopDB';
 const collection = 'sales';
 
 // The current database to use.
-use(database);
+//use(database);
 
 // Create a new collection.
 //db.createCollection(collection);
@@ -28,9 +28,16 @@ it groups the filtered documents by the "cust_id" field and calculates the sum o
 for each group using the  stage. The result is a list of documents that contain the "_id"
 field (which is the "cust_id" value) and the "total" field (which is the sum of the "amount" values
 for that "cust_id"). */
+// use(database);
 // db.sales.aggregate([
 //     {$match: { status: 'A'}},
 //     {$group: {_id: "$cust_id", total: {$sum: "$amonut"}}}
+// ]);
+
+// use(database);
+// db.sales.aggregate([
+//     {$match: { status: 'A'}},
+//     {$group: {_id: null, total: {$sum: "$amonut"}}}
 // ]);
 
 
@@ -56,8 +63,29 @@ include documents where the "total" field is greater than or equal to 6. */
 //     {$group: {_id: null, count: {$sum: 1}}}
 // ]);
 
-db.sales.find({
-    $or: [{status: 'A'}, {amonut: {$gt: 1}}]
-}).count();
+// db.sales.find({
+//     $or: [{status: 'A'}, {amonut: {$gt: 1}}]
+// }).count();
 
 
+// use('shopDB');
+// db.sales.updateMany({}, {
+//     $set: {
+//         orderDate: new Date()
+//     }
+// });
+// db.sales.find();
+
+
+
+use('shopDB');
+//db.sales.find();
+db.sales.updateOne(
+    { _id: '64631f35b7d99d6f9317f6ee' },
+    {
+        $set: {
+            orderDate: ISODate('1987-11-19')
+        }
+    }
+);
+db.sales.find();

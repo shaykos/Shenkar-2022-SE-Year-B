@@ -1,7 +1,7 @@
 use('MR_DB');
 // db.classes.drop()
 // db.createCollection("classes")
-// //
+
 // db.classes.insertOne({ 
 //   class : "Databases",
 //   startDate : new Date(2021, 10 , 21) ,
@@ -19,7 +19,7 @@ use('MR_DB');
 //      title: "Big Data" ,
 //      price: 130.65 
 //    } })
-// //
+
 // db.classes.insertOne({ 
 //   class : "Programing",
 //   startDate : new Date(2021, 10 , 21) ,
@@ -157,30 +157,37 @@ use('MR_DB');
 /* This code is performing an aggregation operation on the "classes" collection in MongoDB. It is using
 the aggregate method to apply a pipeline of operations to the collection. */
 db.classes.aggregate([
-  {$match:{class: {$exists: true}}},
-  {$group: {_id: null, total_courses: {$sum: 1}}}
+  { $match: { class: { $exists: true } } },
+  { $group: { _id: null, total_courses: { $sum: 1 } } }
 ]);
 
 /* This code is finding all documents in the "classes" collection where the "class" field exists and
 then returning the count of those documents. */
-db.classes.find({class: {$exists: true}}).count();
+db.classes.find({ class: { $exists: true } }).count();
 
 //Q2
 use('MR_DB')
 db.classes.aggregate([
-  {$match: {students: {$exists: true}}},
-  {$group: {_id: null, total_courses: {$sum:1}}}
+  { $match: { students: { $exists: true } } },
+  { $group: { _id: null, total_courses: { $sum: 1 } } }
 ]);
 
 use('MR_DB')
-db.classes.find({students: {$exists: true}}).count();
+db.classes.find({ students: { $exists: true } }).count();
 
 //Q3
 use('MR_DB')
 db.classes.aggregate([
-  {$match: {book: {$exists: false}}},
-  {$group: {_id: null, total_courses_without_books: {$sum:1}}}
+  { $match: { book: { $exists: false } } },
+  { $group: { _id: null, total_courses_without_books: { $sum: 1 } } }
 ]);
 
 use('MR_DB')
-db.classes.find({book: {$exists: false}}).count();
+db.classes.find({ book: { $exists: false } }).count();
+
+//Q4
+use('MR_DB');
+db.classes.aggregate([
+  { $unwind: "$students" },
+  { $group: { _id: "$students", total_courses: { $sum: 1 } }}
+]);
