@@ -1,16 +1,17 @@
 //ייבוא ואתחול
+require('dotenv').config();
 const express = require('express');
-const path = require('node:path');
 const cors = require('cors');
 const PORT = 5500;
 
 //יצירת השרת
 let server = express();
+server.use(express.json());
 server.use(cors());
-
 
 //ניתוב
 server.use('/api/users', require('./routes/users.route'));
+server.use('/api/menu', require('./routes/menu.route'));
 
 
 //הפעלת השרת
