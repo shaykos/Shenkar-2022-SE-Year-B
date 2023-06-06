@@ -1,20 +1,24 @@
-const UserModel = require('../models/user');
+const UserModel = require('../models/user.model');
 const UsersRoutes = require('express').Router();
 
-UsersRoutes.get('/', async (req, res) => {
+UsersRoutes.post('/register', async (req, res) => {
     try {
-        let data = await UserModel.FindAllUsers();
-        res.status(200).json(data);
+        let { username, email, password } = req.body;
+        let newUser = await UserModel.Register(username, email, password);
+        res.status(201).json(newUser);
     } catch (error) {
         res.status(500).json({ error });
     }
 });
 
-UsersRoutes.get('/:city', async (req, res) => {
+UsersRoutes.post('/login', async (req, res) => {
     try {
-        let { city } = req.params;
-        let data = await UserModel.FindByCity(city);
-        res.status(200).json(data);
+        let { email, password } = req.body;
+        let user = await UserModel.Login(email, password);
+        if (!user) // if(user == null || user == undefined)
+            res.status(401).json({ msg: "incorrect details" });
+        else
+            res.status(200).json(user);
     } catch (error) {
         res.status(500).json({ error });
     }
